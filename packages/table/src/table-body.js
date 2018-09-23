@@ -386,7 +386,7 @@ export default {
 
     handleExpandClick(row, e) {
       e.stopPropagation();
-      this.handleEvent(e, row, 'click');
+      // this.handleEvent(e, row, 'click');
       this.store.toggleRowExpansion(row);
     }
   }

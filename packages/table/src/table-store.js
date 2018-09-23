@@ -452,7 +452,7 @@ TableStore.prototype.toggleRowSelection = function(row, selected) {
 TableStore.prototype.toggleRowExpansion = function(row, expanded) {
   const changed = toggleRowExpansion(this.states, row, expanded);
   if (changed) {
-    this.table.$emit('expand-change', row, this.states.expandRows);
+    this.table.$emit('expand-change', row, this.states.expandRows, expanded);
     this.scheduleLayout();
   }
 };
